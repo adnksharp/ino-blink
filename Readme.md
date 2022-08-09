@@ -1,25 +1,18 @@
 # Blink
 [![Blink-bb.png](https://i.postimg.cc/nhTYnpyq/Untitled-Sketch-bb.png)]()
-### Parpadeo de salidas digitales usando la función ```millis()```
+Parpadeo de salidas digitales.
 
 ## Hardware y software necesarios
-- Placa de desarrollo
+- Placa de desarrollo Arduino 
 - [Arduino IDE](https://www.arduino.cc/en/software) o [Arduino CLI](https://arduino.github.io/arduino-cli/0.23/installation/)
 
-Para el funcionamiento del programa se utilizan:
-
-| Variable | [Tipo](https://docs.microsoft.com/en-us/cpp/cpp/data-type-ranges?view=msvc-170) | Descripción |
-| -------- | ---- | ----------- |
-| Millis | unsigned long long | Constante que marca la última vez que el LED ha cambiado de estado |
-| Delay | short | Tiempo de espera entre cambios de estado |
-| Out | boolean | Estado actual del LED |
-
-| Componente |
-| ----------- |
-| Arduino |
-| LED integrado en la placa |
-
 ## Funcionamiento
-Usando la función ```millis()``` y la variable Millis, se puede controlar el estado del LED comparando la diferencia de estos dos valores respecto a la variable Delay.
+#### Variables
+```Out```: Variable tipo bool que define el estado de la salida digital.
 
-Si la diferencia es mayor que la variable Delay, el LED cambia de estado usando la variable Out.
+```Delay```: Tiempo en milisegundos que tarda la variable **Out** en cambiar de valor.
+
+```Millis```: Variable que guarda la ultima vez que la variable **Out** cambio de valor.
+
+#### Funcionamiento
+El microcontrolador revisa si han pasado ```Delay``` milisegundos (usando la función ```millis()``` y la variable ```Millis```). De ser así, actualiza la variable ```Millis```, cambia el valor de ```Out``` y actualiza el estado de la salida digital.
