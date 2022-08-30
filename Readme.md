@@ -1,5 +1,7 @@
 # Blink
-[![Blink-bb.png](https://i.postimg.cc/nhTYnpyq/Untitled-Sketch-bb.png)]()
+
+[![blink.png](https://i.postimg.cc/qRd3wc2j/blink.png)](https://postimg.cc/ns0rcDRD)
+
 Parpadeo de salidas digitales.
 
 ## Hardware y software necesarios
